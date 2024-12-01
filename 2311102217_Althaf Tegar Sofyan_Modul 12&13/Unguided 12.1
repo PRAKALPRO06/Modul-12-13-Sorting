@@ -1,0 +1,49 @@
+package main
+
+//Althaf Tegar 2311102217 IF06
+
+import (
+    "fmt"
+    "sort"
+)
+
+func main() {
+    var n217 int
+    fmt.Print("Masukkan jumlah daerah: ")
+    fmt.Scan(&n217)
+
+    for daerah_n217 := 1; daerah_n217 <= n217; daerah_n217++ {
+        var m17 int
+        fmt.Printf("\nMasukkan jumlah nomor rumah untuk daerah %d: ", daerah_n217)
+        fmt.Scan(&m17)
+
+        arr := make([]int, m17)
+        fmt.Printf("Masukkan %d nomor rumah: ", m17)
+        for i := 0; i < m17; i++ {
+            fmt.Scan(&arr[i])
+        }
+
+        var ganjil, genap []int
+
+        sort.Ints(ganjil)
+        sort.Sort(sort.Reverse(sort.IntSlice(genap)))
+
+        // Pisahkan bilangan ganjil dan genap
+        for _, num := range arr {
+            if num%2 == 0 {
+                genap = append(genap, num)
+            } else {
+                ganjil = append(ganjil, num)
+            }
+        }
+
+        fmt.Printf("Nomor rumah untuk daerah %d: ", daerah_n217)
+        for _, num := range ganjil {
+            fmt.Printf("%d ", num)
+        }
+        for _, num := range genap {
+            fmt.Printf("%d ", num)
+        }
+        fmt.Println()
+    }
+}
