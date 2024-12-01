@@ -155,7 +155,7 @@ func main() {
 
 Program ini dirancang untuk membantu pengguna mengurutkan nomor rumah kerabat di berbagai daerah menggunakan algoritma Selection Sort. Pengguna dapat memasukkan jumlah daerah, jumlah nomor rumah di setiap daerah, dan daftar nomor rumah untuk setiap daerah tersebut. Program akan mengurutkan nomor rumah dari terkecil ke terbesar untuk setiap daerah secara terpisah dan menampilkan hasilnya.
 
-### 2
+### Guided 2
 
 #### Study Case
 
@@ -248,7 +248,7 @@ Program ini dirancang untuk mengelola data integer, seperti usia peserta kursus,
 
 ## Unguided
 
-### 1
+### Unguided 1
 
 #### Study Case
 
@@ -415,7 +415,7 @@ Program ini dirancang untuk mengelola daftar nomor rumah kerabat di beberapa dae
 **Struktur Output**
 - Setiap hasil untuk daerah tertentu dipisahkan dengan garis batas untuk memberikan kejelasan.
 
-### 2
+### Unguided 2
 
 #### Study Case
 
@@ -553,7 +553,7 @@ Program ini membaca serangkaian angka dari pengguna, mengurutkannya menggunakan 
 - Jika jumlah elemen **ganjil**, median adalah elemen tengah.
 - Jika jumlah elemen **genap**, median adalah rata-rata dari dua elemen tengah.
 
-### 3
+### Unguided 3
 
 #### Study Case
 
