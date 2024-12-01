@@ -1,0 +1,69 @@
+package main
+
+import (
+    "fmt"
+    "sort"
+)
+
+// Fungsi untuk mengurutkan array menggunakan Selection Sort
+func selectionSort(arr []int, n int) {
+    for i := 0; i < n-1; i++ {
+        idxMin := i
+        for j := i + 1; j < n; j++ {
+            // Cari elemen terkecil
+            if arr[j] < arr[idxMin] {
+                idxMin = j
+            }
+        }
+        // Tukar elemen terkecil dengan elemen di posisi i
+        arr[i], arr[idxMin] = arr[idxMin], arr[i]
+    }
+}
+
+// Fungsi untuk menghitung median
+func median(arr []int, n int) float64 {
+    if n%2 == 0 {
+        return float64(arr[n/2-1]+arr[n/2]) / 2.0
+    }
+    return float64(arr[n/2])
+}
+
+func identitas() {
+    fmt.Println("=======================================")
+    fmt.Println("Nama :Haposan Felix Marcel Siregar")
+    fmt.Println("NIM:2311102210")
+fmt.Println("=======================================")
+}
+func main() {
+    identitas()
+
+    // Inisialisasi array dan variabel
+    arr := make([]int, 0, 1000000)
+    arrMedian := make([]float64, 0, 1000000)
+    datum := 0
+
+    fmt.Println("Masukkan data (akhiri dengan -5313):")
+
+    // Input data hingga ditemukan -5313
+    for {
+        fmt.Scan(&datum)
+        if datum == -5313 {
+            break
+        }
+
+        if datum == 0 {
+            // Jika data = 0, hitung median dari array
+            sort.Ints(arr) // Menggunakan sort untuk pengurutan
+            arrMedian = append(arrMedian, median(arr, len(arr)))
+        } else {
+            // Tambahkan data ke array
+            arr = append(arr, datum)
+        }
+    }
+
+    // Output hasil
+    fmt.Println("Output:")
+    for _, med := range arrMedian {
+        fmt.Printf("%.2f\n", med)
+    }
+}
